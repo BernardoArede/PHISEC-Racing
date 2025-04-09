@@ -1,0 +1,413 @@
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #282828;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainContent {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6b0709;
+    box-shadow: 0px 4px 20px rgb(0, 0, 0,0.4);
+    position: fixed;
+    bottom: 0; /* Inicialmente, o header é relativo */
+    z-index: 1000;
+    width: 100%; 
+    margin-top: 0; /* Garante que o header fique acima do conteúdo */
+  }
+
+  .header.fixed {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+  }
+
+
+  /* Estilo do dropdown */
+  .dropdown {
+    position: absolute;
+    background-color: #6b0709; /* Mesma cor do header */
+    opacity: 0.95; 
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+    padding: 5px;  
+    z-index: 1000;
+    top:100%;
+  
+    left: 0;
+    min-width: 92%; /* Faz o dropdown ter a mesma largura que o item "Team" */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Sombra consistente com o header */
+  }
+
+  .dropdownItem {
+    display: block;
+    text-align: center;
+    padding: 20px 30px; /* Mesmo padding do .navLink */
+    color: rgb(255, 255, 255); /* Mesma cor do texto */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+    position: relative;
+  }
+
+  .dropdownItem:hover {
+    color: rgb(255, 255, 255); /* Mesma cor do texto no hover */
+    transform: scale(1.1); /* Mesmo efeito de escala no hover */
+    letter-spacing: 1px; /* Mesmo espaçamento no hover */
+  }
+
+  .dropdownItem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 3px;
+    background-color: #D7A00D; /* Sublinhado amarelo */
+    transition: width 0.5s ease;
+
+  }
+
+  .dropdownItem:hover::after {
+    width: 90%; /* Sublinhado amarelo no hover */
+    margin-left: 5px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  /* Estilo do dropdown no mobile */
+  .dropdownMobile {
+    background-color: #6b0709;
+    opacity: 0.8; /* Mesma cor do header */
+    padding: 0; /* Removemos o padding para alinhar com o estilo do menu */
+  }
+
+  .dropdownMobile .dropdownItem {
+    padding: 15px 20px; /* Mesmo padding do .navLink no mobile */
+  }
+
+
+  .logo {
+    width: 65px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .navLink {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+    padding: 20px 30px;
+    margin-right: 30px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+  }
+
+  .navLink:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    letter-spacing: 1px;
+  }
+
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #D7A00D;
+    transition: width 0.5s ease;
+  }
+
+  .navLink:hover::after {
+    width: 100%;
+    
+  }
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin-bottom: 0;
+    overflow: hidden;
+    
+  }
+
+  .heroOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: #f0f0f0;
+  }
+
+  .heroContent {
+    position: relative;
+    z-index: 2;
+  }
+
+  .heroImage {
+    background-color: #f0f0f0;
+    width: 100%; 
+    height: 95%; 
+    opacity: 0.9;
+    object-fit: cover; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
+  }
+
+  .heroTitle {
+    font-size: 5rem;
+    letter-spacing: 4px;
+    color: #060606;
+    text-shadow: 3px 3px 10px rgba(194, 46, 46, 0.8);
+    opacity: 25%;
+  }
+
+  .heroSubtitle {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+  }
+
+  .footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid gray;
+  }
+
+  .footerText {
+    color: gray;
+  }
+
+
+  /* Media Queries para Smartphones */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+
+    .header {
+      padding: 10px;
+      width: 100%;
+    }
+    
+    .footer{
+      padding: 10px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 30px;
+    }
+
+    .navLink {
+      padding: 10px 15px;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .heroTitle {
+      font-size: 3rem;
+    }
+
+    .heroSubtitle {
+      font-size: 1rem;
+    }
+
+    .mainContent {
+      padding-top: 60px;
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+
+    .contentWrapper {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .mainTitle {
+      font-size: 24px;
+      margin-top: 50px;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .mainText {
+      font-size: 16px;
+      padding: 0;
+    }
+
+    .topCard {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .bottomRow {
+      width: 100%;
+      flex-direction: column;
+      align-self: start;
+      align-items: center;
+      justify-content: center;
+  
+    }
+
+    .bottomCard {
+      width: 100%;
+      height: 120px;
+    }
+
+    .cardTitle {
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    .sponsorsTitle {
+      font-size: 24px;
+    }
+
+    .sponsorsGoldTitle {
+      font-size: 20px;
+    }
+
+    .sponsorsGrid, .sponsorsGridGold {
+      gap: 10px;
+    }
+
+    .sponsorLogo {
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mainTitle {
+      font-size: 20px;
+    }
+
+    .mainText {
+      font-size: 14px;
+    }
+
+    .cardTitle {
+      font-size: 20px;
+      padding: 15px;
+    }
+
+    .sponsorsTitle {
+      font-size: 20px;
+    }
+
+    .sponsorsGoldTitle {
+      font-size: 18px;
+    }
+
+    .sponsorLogo {
+      width: 120px;
+    }
+  }
+
+
+  /* Estilo do ícone do menu mobile */
+  .menuIcon {
+    display: none; /* Escondido por padrão (visível apenas em mobile) */
+    flex-direction: column;
+    gap:4px;
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+  }
+
+  .menuIcon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navMobile {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #6b0709;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  .navMobile .navLink {
+    padding: 15px 20px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Estilo para quando o menu mobile está aberto */
+  .navMobile.open {
+    display: flex;
+  }
+
+  /* Animação do ícone do menu quando aberto */
+  .menuIcon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menuIcon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuIcon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Media Queries para ativar o menu mobile em telas menores */
+  @media (max-width: 768px) {
+    .nav {
+      display: none; /* Esconde o menu desktop em telas menores */
+    }
+
+    .menuIcon {
+      display: flex; /* Mostra o ícone do menu mobile */
+    }
+
+    .navMobile {
+      display: none; /* Esconde o menu mobile por padrão */
+    }
+
+    .navMobile.open {
+      display: flex; /* Mostra o menu mobile quando aberto */
+    }
+  }

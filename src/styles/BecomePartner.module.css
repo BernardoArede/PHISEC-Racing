@@ -1,0 +1,91 @@
+/* Example CSS content */
+.applicationFormSection {
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+  }
+  
+  .formContainer {
+    flex:1;
+    max-width: 600px;
+    margin: 0 auto;
+  } 
+  
+  .formTitle {
+    margin-top: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .formDescription {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .applicationForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formLabel {
+    font-weight: bold;
+  }
+  
+  .formInput, .formTextarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .formButton {
+    background-color: #9d0b0e;
+    font-weight: bold;
+    width: 103.5%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .formButton:hover {
+    background-color: #80090b;
+  }
+  
+  footer{
+    margin-top: auto;
+  }
+  
+  /* Remove as setas do input[type="number"] */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none; /* Chrome, Safari */
+  appearance: none; /* Outros navegadores */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Classe personalizada para remover as setas no campo de número */
+.noSpin {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none; /* Chrome, Safari */
+  appearance: none; /* Outros navegadores */
+}
+
+.noSpin::-webkit-outer-spin-button,
+.noSpin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

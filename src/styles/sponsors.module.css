@@ -1,0 +1,171 @@
+.titleWithLines {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0; /* Espaçamento ao redor do título */
+}
+
+/* Mantenha o restante do seu CSS existente */
+.sponsorsSectionPlatiunum {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.sponsorsSectionGold {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.sponsorsSectionSilver {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.sponsorsSectionBronze {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.sponsorsSectionPartner {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.sponsorsTitle {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 20px;
+    margin-bottom: 40px; /* Espaçamento entre o texto e as linhas */
+    color: #6b0709;
+    text-shadow: 2px 2px 4px #6b070966;
+}
+
+.sponsorsGoldTitle {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    /* Espaçamento entre o texto e as linhas */
+    color: #d7a00d;
+    text-shadow: 2px 2px 4px #d7a00d66;
+}
+
+.sponsorsSilverTitle {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 20px; /* Espaçamento entre o texto e as linhas */
+    margin-bottom: 40px;
+    color: #71737a;
+    text-shadow: 2px 2px 4px #A5a9b466;
+}
+
+.sponsorsBronzeTitle {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 20px; /* Espaçamento entre o texto e as linhas */
+    margin-bottom: 40px;
+    color: #Ce8946;
+    text-shadow: 2px 2px 4px #Ce894666;
+}
+.sponsorsPartnerTitle {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0 20px; /* Espaçamento entre o texto e as linhas */
+    margin-bottom: 40px;
+    color: #000000;
+    text-shadow: 2px 2px 4px #58575766;
+}
+
+/* Layout flexível para os logos */
+.sponsorsGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sponsorsGridGold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: -10px;
+}
+
+.sponsorLogo {
+    width: 300px; 
+    height: auto;
+    margin-bottom: -30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sponsorLogo:hover {
+    transform: scale(1.1); 
+}
+
+.imgContainer{
+    width: 100%;
+    height: 300px;
+    background-image: url('../assets/images/Sponsors_image.JPG');
+    background-size: cover;
+    background-position: center;
+    background-position-y: 0%;
+    box-shadow: 0 0 10px 5px #00000077;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleImage{
+    margin-top: 80px;
+    text-align: center;
+    width: 70%;
+    line-height: 75px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titleWithLines {
+        flex-direction: column;
+    }
+
+    .titleWithLines::before,
+    .titleWithLines::after {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .sponsorsTitle,
+    .sponsorsGoldTitle,
+    .sponsorsSilverTitle,
+    .sponsorsBronzeTitle,
+    .sponsorsPartnerTitle {
+        font-size: 32px; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    .sponsorLogo {
+        width: 150px; /* Reduz o tamanho dos logos para telas menores */
+    }
+
+    .titleImage {
+        font-size: 36px; /* Reduz o tamanho da fonte para telas menores */
+        line-height: 50px;
+    }
+
+    .imgContainer {
+        height: 300px; /* Reduz a altura da imagem de fundo para telas menores */
+    }
+
+    /* Ajuste para espaçamento uniforme entre os logos */
+    .sponsorsGrid,
+    .sponsorsGridGold {
+        gap: 15px; /* Espaçamento uniforme entre os logos */
+        padding: 10px; /* Reduz o padding para melhorar o espaçamento geral */
+    }
+}
