@@ -61,13 +61,16 @@ const ph24 = () => {
         ],
       },
       {
-        name: "Suspension",
+        name: "Eletronics & Powertrain",
         members: [
-          { name: "Dinis Coelho", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb/?trk=opento_nprofile_details" },
-          { name: "Rafael Quintino", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Carlos Paixão", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Rodrigo Carvalho", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "André Alves", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "Miguel Monteiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Tiago Gaspar", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Francisco Soeiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Jordão Pereira", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
         ],
+    
+        
       },
       {
         name: "Drivetrain & Cooling",
@@ -78,13 +81,12 @@ const ph24 = () => {
         ],
       },
       {
-        name: "Eletronics & Powertrain",
+        name: "Suspension",
         members: [
-          { name: "André Alves", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Miguel Monteiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Tiago Gaspar", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Francisco Soeiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Jordão Pereira", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Dinis Coelho", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb/?trk=opento_nprofile_details" },
+          { name: "Rafael Quintino", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Carlos Paixão", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Rodrigo Carvalho", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       },
       {
@@ -111,11 +113,12 @@ const ph24 = () => {
         name: "Operations",
         members: [
           { name: "Diogo Farias", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Bernardo Arede", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Mafalda Pinto", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Leonor Jacinto", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Rodrigo Ferreira", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
         ],
+
+          //TODO-> Add department
       },
     ],
   };

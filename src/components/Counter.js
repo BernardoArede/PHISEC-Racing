@@ -5,7 +5,7 @@ function Counter({ end, duration }) {
 
   useEffect(() => {
     let start = 0;
-    const increment = end / (duration / 10); // Calcula o incremento com base na duração
+    const increment = end / (duration / 10);
 
     const timer = setInterval(() => {
       start += increment;

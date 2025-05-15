@@ -1,7 +1,6 @@
   import { useEffect, useState } from "react";
   import styles from "../styles/Team25.module.css";
   import Header from "./Header.js";
-  import Footer from "./Footer.js";
 
   const ph25 = () => {
     const [timeLeft, setTimeLeft] = useState({
@@ -12,7 +11,7 @@
     });
 
     useEffect(() => {
-      const targetDate = new Date("2025-04-23T00:00:00").getTime();
+      const targetDate = new Date("2025-06-11T00:00:00").getTime();
 
       const updateTimer = () => {
         const now = new Date().getTime();
@@ -43,7 +42,7 @@
         {/* Título e data */}
         <section className={styles.countdownSection}>
           <h1 className={styles.title}>ROLLOUT</h1>
-          <h3 className={styles.date}>April 23</h3>
+          <h3 className={styles.date}>June 11</h3>
 
           {/* Countdown */}
           <div className={styles.countdown}>
