@@ -6,8 +6,10 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p>© {new Date().getFullYear()} PHISEC Racing. Todos os direitos reservados.<br/><br/>  
-          Rua Pedro Nunes, 3030-199 Coimbra, ISEC
+        <p>© {new Date().getFullYear()} PHISEC Racing - Associação Juvenil de Engenharia. 
+          <br></br>Todos os direitos reservados.   
+          <br></br>Rua Pedro Nunes, 3030-199 Coimbra, ISEC<br/><br/>  
+          
         </p>        
         <div className={styles.socialLinks}>
           <a href="https://www.instagram.com/phisecracing/" target="_blank" rel="noopener noreferrer">

@@ -15,6 +15,7 @@ import powertrain from '../assets/icons_departments/powertrain_dep.png';
 import suspension from '../assets/icons_departments/suspension_dep.png';
 import vehicle from '../assets/icons_departments/vehicle_dynamics_dep.png';
 import management from '../assets/icons_departments/management_dep.png'
+import autonomous from '../assets/icons_departments/autonomous_dep.png'
 
 function About() {
   useEffect(() => {
@@ -32,6 +33,8 @@ function About() {
     { id: 6, icon: suspension, name: 'Suspension', description: 'The Suspension department develops damping, breaking and systems.' },
     { id: 7, icon: vehicle, name: 'Vehicle Dynamics', description: 'The Vehicle Dynamics department simulates and optimizes overall vehicle performance.' },
     { id: 8, icon: management, name: 'Management', description: 'Composed of the Team Leader and Technical Director, the Managment department oversees the whole team.' },
+    { id: 9, icon: autonomous, name: 'Autonomous Systems', description: ' The autonomous department is responsable for all systems need for the car to operate by it self' },
+    
   ];
 
   return (
@@ -59,15 +62,15 @@ function About() {
       <section className={style.counterSection}>
         <div className={style.counterContainer}>
           <div className={style.counterCard}>
-            <h1><Counter end={30} duration={1000} /></h1>
+            <h1><Counter end={46} duration={1000} /></h1>
             <h3>Members</h3>
           </div>
           <div className={style.counterCard}>
-            <h1><Counter end={11} duration={1000} /></h1>
+            <h1><Counter end={12} duration={1000} /></h1>
             <h3>Courses</h3>
           </div>
           <div className={style.counterCard}>
-            <h1><Counter end={7} duration={1000} /></h1>
+            <h1><Counter end={9} duration={1000} /></h1>
             <h3>Departments</h3>
           </div>
         </div>

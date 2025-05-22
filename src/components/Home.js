@@ -34,7 +34,7 @@ function Home() {
       {/* Resto do conteúdo da página */}
       <section className={styles.mainContent}>
       <div className={style.contentWrapper}>
-          <h1 className={style.mainTitle}>DESIGNED BY IDIOTS, RACED BY MORONS.</h1>
+          <h1 className={style.mainTitle}>BUILD TO LEARN. DRIVEN BY PASSION.</h1>
           <p className={style.mainText}>
           PHISEC Racing is the Formula Student team from the Polytechnic University of Coimbra, operating out of 
           the Coimbra Institute of Engineering. This project offers students a unique chance to apply classroom 

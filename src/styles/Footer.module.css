@@ -2,9 +2,10 @@
     background-color: #282828;
     color: #fff;
     text-align: center;
-    height: 50px;
+    height: 80px;
     padding: 20px 20px;
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
   }
   
   .container {

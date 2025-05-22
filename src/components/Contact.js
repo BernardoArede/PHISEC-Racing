@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Contact.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import vitorsimoes from "../assets/team_members/eletronics/vitorsimoes.jpg";
-import joaocoelho from "../assets/team_members/eletronics/joaocoelho.jpg";
+import DianaSousa from '../assets/team_members/aero/Diana Sousa.jpg'
 
 const Contact = () => {
   useEffect(() => {
@@ -94,7 +93,7 @@ ${formData.name} (${formData.email})`;
 
       <div className={styles.contactContainer}>
         <div className={styles.contactCard}>
-          <img src={vitorsimoes} alt="Vitor Simões" className={styles.contactImage} />
+          <img src={DianaSousa} alt="Vitor Simões" className={styles.contactImage} />
           <div className={styles.contactInfo}>
             <h2>Vitor Simões</h2>
             <p className={styles.role}>Team Leader</p>
@@ -102,7 +101,7 @@ ${formData.name} (${formData.email})`;
           </div>
         </div>
         <div className={styles.contactCard}>
-          <img src={joaocoelho} alt="João Coelho" className={styles.contactImage} />
+          <img src={DianaSousa} alt="João Coelho" className={styles.contactImage} />
           <div className={styles.contactInfo}>
             <h2>João Coelho</h2>
             <p className={styles.role}>Technical Director</p>

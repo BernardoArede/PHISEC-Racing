@@ -1,43 +1,51 @@
+/* General page container */
 .teamPage {
   width: 100%;
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Photo Section (retained for PH24) */
 .photoSection {
   width: 100%;
-  height: 570px;
+  height: 570px; /* Fixed height for the photo section */
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Space below the photo */
 }
 
 .photoSection img {
   width: 100%;
   height: 100%;
-  transform: translateY(-60px);
+  transform: translateY(-60px); /* Adjust position if needed */
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
 .photoSection:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
+/* Main Content (car specs + results - retained for PH24) */
 .mainContent {
   display: flex;
   padding: 20px;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto; /* Center with bottom margin */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .carSpecs,
 .results {
   background-color: #ffffff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  flex: 1;
+  flex: 1; /* Allows them to grow and shrink */
+  min-width: 300px; /* Minimum width before wrapping */
   padding: 25px;
   border-radius: 15px;
   text-align: center;
@@ -54,7 +62,11 @@
 .results h1 {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #912525;
+  color: #912525; /* Red color as specified */
+  display: flex; /* For flag alignment */
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  gap: 10px; /* Space between flag and text */
 }
 
 .carSpecs ul,
@@ -70,22 +82,16 @@
   color: #555;
 }
 
+/* Departments Container */
 .departmentsContainer {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allows it to grow and push the footer down */
+  padding: 20px;
   margin-top: 20px;
+  max-width: 1200px; /* Max width for departments */
+  margin: 20px auto 40px auto; /* Center with top and bottom margin */
 }
 
-.departmentsContainer h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #912525;
-  text-align: center;
-}
-
+/* Department Titles */
 .department {
   margin-bottom: 40px;
 }
@@ -105,18 +111,23 @@
   gap: 20px;
 }
 
+/* Member Card Styling (from your provided style - "stretched and thin") */
 .memberCard {
-  flex: 1 1 calc(25% - 20px);
+  flex: 1 1 calc(25% - 20px); /* Adjusts to 4 cards per row, with gap */
   max-width: calc(25% - 20px);
   background-color: #ffffff;
-  height: 400px;
+  height: 400px; /* Fixed height for "stretched" look */
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Important for image and icon effects */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
 }
 
 .memberCard:hover {
@@ -125,57 +136,62 @@
 }
 
 .memberCard.teamLeader {
-  background-color: #ffe8e8;
-  border: 2px solid #912525;
+  background-color: #ffe8e8; /* Lighter background for leaders */
+  border: 2px solid #912525; /* Red border for leaders */
 }
 
 .memberImage {
   position: relative;
-  width: 100%;
-  height: 350px;
+  width: 100%; /* Take full width of the card's padding area */
+  height: 350px; /* Fixed height for the image container */
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /* Ensures image is clipped to rounded corners */
+  margin-bottom: 0px; /* No margin here, text will follow directly */
 }
 
 .memberImage img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Covers the area, possibly cropping */
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .memberCard:hover .memberImage img {
   transform: scale(1.1);
-  filter: brightness(0.6); /* Escurece a imagem ao passar o mouse */
+  filter: brightness(0.6); /* Darkens the image on hover */
 }
 
 .linkedinIcon {
   position: absolute;
-  left: 0%;
-  top:0%;
-  background-color: transparent;
+  left: 0; /* Align to the left edge of memberImage */
+  top: 0; /* Align to the top edge of memberImage */
+  background-color: transparent; /* No background by default */
   padding: 10px;
-  border-radius: 40%;
+  /* border-radius: 40%; - Not needed for full overlay */
   transition: opacity 0.3s ease, background-color 0.3s ease;
-  color: #0e76A8;
+  color: #0e76A8; /* LinkedIn blue */
   font-size: 40px;
-  opacity: 0;
-  z-index: 2;
+  opacity: 0; /* Hidden by default */
+  z-index: 2; /* Ensures it's above the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make it cover the full image height */
+  width: 100%; /* Make it cover the full image width */
 }
 
 .memberCard:hover .linkedinIcon {
-  opacity: 1; 
-  background-color: transparent;  
-  height: 350px;
-  width: 100%;
+  opacity: 1; /* Visible on hover */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay on hover */
 }
+
 .memberCard p {
-  margin: 15px 0 5px;
+  margin: 15px 0 5px; /* Spacing for name */
   font-size: 18px;
   color: #333;
   font-weight: bold;
   position: relative;
-  z-index: 2; /* Garante que o texto fique acima do overlay */
+  z-index: 2; /* Ensures text is above the image/overlay */
 }
 
 .role {
@@ -183,10 +199,10 @@
   color: #000000;
   font-weight: 500;
   position: relative;
-  z-index: 2; /* Garante que o texto fique acima do overlay */
+  z-index: 2; /* Ensures text is above the image/overlay */
 }
 
-/* Responsividade */
+/* Responsividade (from your provided style) */
 @media screen and (max-width: 1024px) {
   .memberCard {
     flex: 1 1 calc(33.33% - 20px);
@@ -196,18 +212,21 @@
 
 @media screen and (max-width: 768px) {
   .mainContent {
-    flex-direction: column;
+    flex-direction: column; /* Stack car specs and results */
+  }
+  .carSpecs, .results {
+    width: 100%; /* Take full width when stacked */
   }
   .memberCard {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
   .photoSection {
-    height: 280px;
+    height: 280px; /* Adjust height for smaller screens */
   }
   .photoSection img {
-    transform: translateY(40px);
-    height: 280px;
+    transform: translateY(0px); /* Adjust transform for smaller screens */
+    height: 280px; /* Match section height */
   }
 }
 
@@ -215,5 +234,37 @@
   .memberCard {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+  .mainContent {
+    padding: 10px; /* Reduce padding for very small screens */
+    gap: 10px;
+  }
+  .carSpecs, .results {
+    padding: 15px; /* Reduce padding */
+  }
+  .departmentsContainer {
+    padding: 15px;
+  }
+  .department h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  .memberCard {
+    height: 350px; /* Slightly adjust height for very small screens */
+    padding: 10px;
+  }
+  .memberImage {
+    height: 300px; /* Adjust image container height */
+  }
+  .linkedinIcon {
+    font-size: 30px; /* Smaller icon */
+    padding: 5px;
+  }
+  .memberCard p {
+    font-size: 16px;
+    margin: 10px 0 3px;
+  }
+  .role {
+    font-size: 12px;
   }
 }

@@ -6,11 +6,6 @@ import teamImage from '../assets/images/background_01.jpg';
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLinkedinIn  } from "react-icons/fa";
 import image1 from "../assets/images/2007.JPG";
-import vitorsimoes from "../assets/team_members/eletronics/vitorsimoes.jpg";
-import luiscarreira from "../assets/team_members/eletronics/luiscarreira.jpg";
-import joaocoelho from "../assets/team_members/eletronics/joaocoelho.jpg";
-import matheuspereira from "../assets/team_members/Drivetrain & Cooling/MatheusPereira.jpg"
-import matheuspereira1 from "../assets/team_members/Drivetrain & Cooling/MatheusPereira1.png"
 
 
 

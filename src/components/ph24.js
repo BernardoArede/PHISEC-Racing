@@ -6,11 +6,7 @@ import teamImage from '../assets/images/background_01.jpg';
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLinkedinIn  } from "react-icons/fa";
 import image1 from "../assets/images/team_photo24.jpg";
-import vitorsimoes from "../assets/team_members/eletronics/vitorsimoes.jpg";
-import luiscarreira from "../assets/team_members/eletronics/luiscarreira.jpg";
-import joaocoelho from "../assets/team_members/eletronics/joaocoelho.jpg";
-import matheuspereira from "../assets/team_members/Drivetrain & Cooling/MatheusPereira.jpg"
-import matheuspereira1 from "../assets/team_members/Drivetrain & Cooling/MatheusPereira1.png"
+
 
 
 const ph24 = () => {
@@ -56,8 +52,8 @@ const ph24 = () => {
       { 
         name: "Management",
         members: [
-          { name: "Vitor Simões", photo: vitorsimoes, role: "Team Leader", linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
-          { name: "João Coelho", photo: joaocoelho, role: "Technical Diretor", linkedin: "https://linkedin.com" },
+          { name: "Vitor Simões", photo:"url_joao_silva" , role: "Team Leader", linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
+          { name: "João Coelho", photo: "url_joao_silva", role: "Technical Diretor", linkedin: "https://linkedin.com" },
         ],
       },
       {
@@ -75,8 +71,8 @@ const ph24 = () => {
       {
         name: "Drivetrain & Cooling",
         members: [
-          { name: "Matheus Pereira", photo: matheuspereira, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "David Magalhães", photo:matheuspereira1 ,role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Matheus Pereira", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "David Magalhães", photo:"url_joao_silva" ,role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "José Dias", photo: "url_ana_costa", role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       },
@@ -92,7 +88,7 @@ const ph24 = () => {
       {
         name: "Vehicle Dynamics",
         members: [
-          { name: "Luís Carreira", photo: luiscarreira, role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "Luís Carreira", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://linkedin.com" },
           { name: "Tiago Cunha", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Catarina Silva", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Mariana Sousa", photo: "", role: "", linkedin: "" },
