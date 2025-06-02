@@ -18,11 +18,31 @@ import Nicholas from '../assets/team_members/chassi/Nicolas.jpg'
 import FranciscoMatos from '../assets/team_members/chassi/Francisco Matos.jpg'
 
 import DiogoMarques from '../assets/team_members/autonomous/DiogoMarques.jpg'
-import DiogoAlbuquerque from '../assets/team_members/autonomous/DiogoAlbuquerque.jpg'
+import DiogoAlbuquerque from '../assets/team_members/autonomous/DiogoAlbuquerque.JPG'
 import BernardoArede from '../assets/team_members/autonomous/BernardoArede.jpg'
 
+//Falta um Tiago Qualquer
+import DavidMagalhaes from '../assets/team_members/Drivetrain & Cooling/David Magalhães.JPG'
+import JoseAndrade from '../assets/team_members/Drivetrain & Cooling/José Miguel Andrade.JPG'
+import MatheusPereira from '../assets/team_members/Drivetrain & Cooling/Matheus Alexandre Pereira.JPG'
+import RodrigoFerreira from '../assets/team_members/Drivetrain & Cooling/Rodrigo Ferreira.JPG'
+
+import TiagoGaspar from '../assets/team_members/eletronics/TiagoGaspar.JPG'
+import Jordao from '../assets/team_members/eletronics/Jordao.JPG'
+import Onorio from '../assets/team_members/eletronics/Onorio.JPG'
+import Soeiro from '../assets/team_members/eletronics/Soeiro.JPG'
+import Alexandre from '../assets/team_members/eletronics/AlexandreFerreira.JPG'
+import AndreAlves from '../assets/team_members/eletronics/AndreAlves.JPG'
+
+import VitorSimoes from '../assets/team_members/management/Vitor Simões.JPG'
+import JoaoCoelho from '../assets/team_members/management/JoaoCoelho.JPG'
 
 
+
+//Suspensão
+//Falta Filipe Pontes
+//Luis Bugalho
+//Bernardo Santos
 
 
 
@@ -36,7 +56,7 @@ const PH25 = () => {
     // The date is already in the past from the current date. I'm assuming you want it to count down to a future event for PH25.
     // I'll set it to a future date, e.g., June 11, 2026, for demonstration.
     // IMPORTANT: Adjust this date to your actual PH25 rollout date!
-    const targetDate = new Date("2025-06-11T00:00:00").getTime(); // Example: June 11, 2026
+    const targetDate = new Date("2025-06-11T00:00:00").getTime(); // Example: June 11, 2025
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -70,26 +90,28 @@ const PH25 = () => {
       {
         name: "Management",
         members: [
-          { name: "Vitor Simões", photo: DiogoAlbuquerque, role: "Team Leader", linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
-          { name: "João Coelho", photo: DiogoAlmeida, role: "Technical Director", linkedin: "https://linkedin.com" },
+          { name: "Vitor Simões", photo: VitorSimoes, role: "Team Leader", linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
+          { name: "João Coelho", photo: JoaoCoelho, role: "Technical Director", linkedin: "https://linkedin.com" },
         ],
       },
       {
         name: "Eletronics & Powertrain",
         members: [
-          { name: "André Alves", photo: "url_andre_alves", role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Miguel Monteiro", photo: "url_miguel_monteiro", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Tiago Gaspar", photo: "url_tiago_gaspar", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Francisco Soeiro", photo: "url_francisco_soeiro", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Jordão Pereira", photo: "url_jordao_pereira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "André Alves", photo: AndreAlves, role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "Miguel Monteiro", photo: Onorio, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Tiago Gaspar", photo: TiagoGaspar, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Francisco Soeiro", photo: Soeiro, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Jordão Pereira", photo: Jordao, role: "Team Member", linkedin: "https://linkedin.com" },
+            { name: "Alexandre Ferreira", photo: Alexandre, role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       },
       {
         name: "Drivetrain & Cooling",
         members: [
-          { name: "Matheus Pereira", photo: DianaSousa, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "David Magalhães", photo: JoaoMorgado, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "José Dias", photo: "url_jose_dias", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Matheus Pereira", photo: MatheusPereira, role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "David Magalhães", photo: DavidMagalhaes, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "José Dias", photo: JoseAndrade, role: "Team Member", linkedin: "https://linkedin.com" },
+           { name: "Rodrigo Pereira", photo: RodrigoFerreira, role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       },
       {
@@ -132,6 +154,9 @@ const PH25 = () => {
           { name: "Mafalda Pinto", photo: "url_mafalda_pinto", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Leonor Jacinto", photo: "url_leonor_jacinto", role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Rodrigo Ferreira", photo: "url_rodrigo_ferreira", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Beatriz X", photo: "url_leonor_jacinto", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Edson Pereira", photo: "url_rodrigo_ferreira", role: "Team Member", linkedin: "https://linkedin.com" },
+        
         ],
       
       },
