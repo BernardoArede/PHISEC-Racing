@@ -3,7 +3,7 @@
   "name": "PHISEC Racing WebSite",
   "icons": [
     {
-      "src": "../assets/images/logos.png",
+      "src": "images/logos.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

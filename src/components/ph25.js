@@ -37,26 +37,42 @@ import AndreAlves from '../assets/team_members/eletronics/AndreAlves.JPG'
 import VitorSimoes from '../assets/team_members/management/Vitor Simões.JPG'
 import JoaoCoelho from '../assets/team_members/management/JoaoCoelho.JPG'
 
+//Suspension
+import DinisCoelho from '../assets/team_members/suspension/DinisCoelho.JPG'
+import BernardoSantos from '../assets/team_members/suspension/BernardoSantos.JPG'
+import CarlosPaixao from '../assets/team_members/suspension/CarlosPaixao.JPG'
+import LuisBugalho from '../assets/team_members/suspension/LuisBugalho.JPG'
+import RafaelQuintino from '../assets/team_members/suspension/RafaelQuintino.JPG'
+import FilipePontes from '../assets/team_members/suspension/FilipePontes.JPG'
+
+//VD
+
+import LuisCarreira from '../assets/team_members/vd/LuisCarreira.JPG'
+import InesCoutinho from '../assets/team_members/vd/InesCoutinho.JPG'
+import Tiago from '../assets/team_members/vd/Tiago.JPG'
+import CatarinaSilva from '../assets/team_members/vd/CatarinaSilva.JPG'
+import MarianaSousa from '../assets/team_members/vd/MarianaSousa.JPG'
 
 
-//Suspensão
-//Falta Filipe Pontes
-//Luis Bugalho
-//Bernardo Santos
+//
+
+import DiogoFarias  from '../assets/team_members/operations/JoeMale.JPG'
+import MafaldaPinto  from '../assets/team_members/operations/JoeFemale.JPG'
+import RodrigoFerreiraVD  from '../assets/team_members/operations/JoeMale.JPG'
+import LeonorJacinto  from '../assets/team_members/operations/Leonor Jacinto.JPG'
+import Beatriz  from '../assets/team_members/operations/Beatriz.JPG'
+import EdsonPereira  from '../assets/team_members/operations/Edson Pereira.JPG'
+
 
 
 
 
 const PH25 = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-
   // Countdown logic
   useEffect(() => {
-    // Set the target date for the Rollout (June 11, 2025)
-    // The date is already in the past from the current date. I'm assuming you want it to count down to a future event for PH25.
-    // I'll set it to a future date, e.g., June 11, 2026, for demonstration.
-    // IMPORTANT: Adjust this date to your actual PH25 rollout date!
-    const targetDate = new Date("2025-06-11T00:00:00").getTime(); // Example: June 11, 2025
+  
+    const targetDate = new Date("2025-06-11T00:00:00").getTime(); // June 11, 2025
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -75,7 +91,7 @@ const PH25 = () => {
     };
 
     const timerInterval = setInterval(updateTimer, 1000);
-    return () => clearInterval(timerInterval); // Cleanup on unmount
+    return () => clearInterval(timerInterval);
   }, []);
 
   // Scroll to top on component mount
@@ -83,7 +99,7 @@ const PH25 = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Your team data for PH25
+  //TODO-> Database for include members
   const teamData = {
     // Removed teamPhoto and competition/carSpecs as requested for PH25
     departments: [
@@ -102,41 +118,45 @@ const PH25 = () => {
           { name: "Tiago Gaspar", photo: TiagoGaspar, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Francisco Soeiro", photo: Soeiro, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Jordão Pereira", photo: Jordao, role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Alexandre Ferreira", photo: Alexandre, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Alexandre Ferreira", photo: Alexandre, role: "Team Member", linkedin: "https://linkedin.com" },
+            
         ],
       },
       {
         name: "Drivetrain & Cooling",
         members: [
           { name: "Matheus Pereira", photo: MatheusPereira, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "David Magalhães", photo: DavidMagalhaes, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "David Magalhães", photo: DavidMagalhaes, role: "Team Member", linkedin: "https://www.linkedin.com/in/david-magalh%C3%A3es-189993334/" },
           { name: "José Dias", photo: JoseAndrade, role: "Team Member", linkedin: "https://linkedin.com" },
-           { name: "Rodrigo Pereira", photo: RodrigoFerreira, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Rodrigo Pereira", photo: RodrigoFerreira, role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       },
       {
         name: "Suspension",
         members: [
-          { name: "Dinis Coelho", photo: "url_dinis_coelho", role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb/?trk=opento_nprofile_details" },
-          { name: "Rafael Quintino", photo: "url_rafael_quintino", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Carlos Paixão", photo: "url_carlos_paixao", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Rodrigo Carvalho", photo: "url_rodrigo_carvalho", role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Dinis Coelho", photo: DinisCoelho, role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb" },
+          { name: "Rafael Quintino", photo: RafaelQuintino, role: "Team Member", linkedin: "https://www.linkedin.com/in/rafaelquintino/" },
+          { name: "Carlos Paixão", photo: CarlosPaixao, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Bernardo Santos", photo: BernardoSantos, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Luís Bugalho", photo: LuisBugalho, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Filipe Pontes", photo: FilipePontes, role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       },
       {
         name: "Vehicle Dynamics",
         members: [
-          { name: "Luís Carreira", photo: BernardoArede , role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Tiago Cunha", photo: "url_tiago_cunha", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Catarina Silva", photo: "url_catarina_silva", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Mariana Sousa", photo: "url_mariana_sousa", role: "", linkedin: "" },
+          { name: "Luís Carreira", photo: LuisCarreira , role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "Tiago Cunha", photo: Tiago, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Catarina Silva", photo: CatarinaSilva, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Mariana Sousa", photo: MarianaSousa, role: "Team Member", linkedin: "" },
+          { name: "Inês Coutinho", photo: InesCoutinho, role: "Team Member", linkedin: "" },
         ],
       },
       {
         name: "Chassi & Aero",
         members: [
           { name: "João Morgado", photo: JoaoMorgado, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Diogo Almeida", photo: DiogoAlmeida, role: "Department Leader", linkedin: "https://linkedin.com" },
+          { name: "Diogo Almeida", photo: DiogoAlmeida, role: "Department Leader", linkedin: "https://www.linkedin.com/in/diogo-de-almeida-543882257/" },
           { name: "Martim Ribeiro", photo: MartimRibeiro, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Eduardo Carvalho", photo: EduardoCarvalho, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Nicholas Sanders", photo: Nicholas, role: "Team Member", linkedin: "https://linkedin.com" },
@@ -150,13 +170,12 @@ const PH25 = () => {
       {
         name: "Operations",
         members: [
-          { name: "Diogo Farias", photo: "url_diogo_farias", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Mafalda Pinto", photo: "url_mafalda_pinto", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Leonor Jacinto", photo: "url_leonor_jacinto", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Rodrigo Ferreira", photo: "url_rodrigo_ferreira", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Beatriz X", photo: "url_leonor_jacinto", role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Edson Pereira", photo: "url_rodrigo_ferreira", role: "Team Member", linkedin: "https://linkedin.com" },
-        
+          { name: "Edson Pereira", photo: EdsonPereira, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Diogo Farias", photo: DiogoFarias, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Mafalda Pinto", photo: MafaldaPinto, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Leonor Jacinto", photo: LeonorJacinto, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Rodrigo Ferreira", photo: RodrigoFerreiraVD, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Beatriz", photo: Beatriz, role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       
       },
