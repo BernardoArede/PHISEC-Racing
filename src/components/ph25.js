@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/Team25.module.css"; // Note: changed to Team25.module.css
+import styles from "../styles/Team25.module.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import { FaLinkedinIn } from "react-icons/fa";
 
+//phisec_admin
+//PHISEC_Racing2024
 
 import DianaSousa from '../assets/team_members/aero/Diana Sousa.jpg'
 import EduardoCarvalho from '../assets/team_members/aero/Eduardo Carvalho.jpg'
@@ -13,7 +15,7 @@ import MartimRibeiro from '../assets/team_members/aero/Martim Ribeiro.jpg'
 import DiogoAlmeida from '../assets/team_members/chassi/Diogo Almeida.jpg'
 import AntonioAlmeida from '../assets/team_members/chassi/António Almeida.jpg'
 import DiogoLaranjeiras from '../assets/team_members/chassi/Diogo Laranjeiras.jpg'
-import Tomas from '../assets/team_members/chassi/Tomás.jpg'
+import TomasCorreia from '../assets/team_members/chassi/Tomás.jpg'
 import Nicholas from '../assets/team_members/chassi/Nicolas.jpg'
 import FranciscoMatos from '../assets/team_members/chassi/Francisco Matos.jpg'
 
@@ -60,7 +62,7 @@ import DiogoFarias  from '../assets/team_members/operations/JoeMale.JPG'
 import MafaldaPinto  from '../assets/team_members/operations/JoeFemale.JPG'
 import RodrigoFerreiraVD  from '../assets/team_members/operations/JoeMale.JPG'
 import LeonorJacinto  from '../assets/team_members/operations/Leonor Jacinto.JPG'
-import Beatriz  from '../assets/team_members/operations/Beatriz.JPG'
+import GabrielaSilva from '../assets/team_members/operations/Beatriz.JPG'
 import EdsonPereira  from '../assets/team_members/operations/Edson Pereira.JPG'
 
 
@@ -101,7 +103,6 @@ const PH25 = () => {
 
   //TODO-> Database for include members
   const teamData = {
-    // Removed teamPhoto and competition/carSpecs as requested for PH25
     departments: [
       {
         name: "Management",
@@ -164,7 +165,7 @@ const PH25 = () => {
           { name: "António Almeida", photo: AntonioAlmeida, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Diogo Laranjeiras", photo: DiogoLaranjeiras, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Francisco Matos", photo: FranciscoMatos, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Tomás", photo: Tomas, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Tomás Correia", photo: TomasCorreia, role: "Team Member", linkedin: "https://www.linkedin.com/in/tomascorreia005" },
         ],
       },
       {
@@ -175,7 +176,7 @@ const PH25 = () => {
           { name: "Mafalda Pinto", photo: MafaldaPinto, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Leonor Jacinto", photo: LeonorJacinto, role: "Team Member", linkedin: "https://linkedin.com" },
           { name: "Rodrigo Ferreira", photo: RodrigoFerreiraVD, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Beatriz", photo: Beatriz, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Gabriela Silva", photo: GabrielaSilva, role: "Team Member", linkedin: "https://linkedin.com" },
         ],
       
       },
