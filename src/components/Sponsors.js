@@ -16,7 +16,7 @@ import efapellogo from '../assets/images/sponsors/efapel.png'
 import sofalcalogo from '../assets/images/sponsors/sofalca.png'
 import cepralogo from '../assets/images/sponsors/cepra.png'
 import coficablogo from '../assets/images/sponsors/coficab.png'
-import kisssoftlogo from '../assets/images/sponsors/kisssoft.png'
+import kisssoftlogo from '../assets/images/sponsors/Kisssoft.png'
 import aeiseclogo from '../assets/images/sponsors/aeisec.png'
 import i2alogo from '../assets/images/sponsors/i2a.png'
 import norelemlogo from '../assets/images/sponsors/norelem.png'
@@ -29,8 +29,14 @@ import smart3D from '../assets/images/sponsors/Smart3d.png'
 import climaTTempo from '../assets/images/sponsors/Clima t tempo.png'
 import RRMP from '../assets/images/sponsors/RRMP.png'
 
+//Bronze
+import Autorecar from '../assets/images/sponsors/Autorecar - 12cm.png'
+import Bender from '../assets/images/sponsors/Bender - 12cm.png'
+import Enapaq from '../assets/images/sponsors/Enepaq - 12cm.png'
+import SingularPrint from '../assets/images/sponsors/Singular Print -12cm.png'
+import Sofalca from '../assets/images/sponsors/Sofalca - 12cm.png'
 
-
+import CadFlow from '../assets/images/sponsors/CADFLOW - 20 cm.png'
 
 function Sponsors() {
   useEffect(() => {
@@ -72,6 +78,9 @@ function Sponsors() {
           </a>
           <a href="https://scalesoceans.pt/" style={{ scale: "90%" }} target="_blank" rel="noopener noreferrer">
             <img src={scaleOceanLogo} alt="extramotion" className={style.sponsorLogo} />
+          </a>
+          <a href="https://www.cadflow.pt/" style={{ scale: "90%" }} target="_blank" rel="noopener noreferrer">
+            <img src={CadFlow} alt="extramotion" className={style.sponsorLogo} />
           </a>
         </div>
       </section>
@@ -120,6 +129,22 @@ function Sponsors() {
           <a href="https://www.isec.pt/PT/Default.aspx" style={{ scale: "70%", marginTop:"30px"}} target="_blank" rel="noopener noreferrer">
             <img src={iseclogo} alt="extramotion" className={style.sponsorLogo} />
           </a>
+          <a href="https://norelem.es/pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={norelemlogo} alt="norelem" className={style.sponsorLogo} />
+        </a>
+        <a href="https://g.co/kgs/gPMeHHV" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={Autorecar} alt="norelem" className={style.sponsorLogo} />
+        </a>
+        <a href="https://www.bender.de/en/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={Bender} alt="norelem" className={style.sponsorLogo} />
+        </a>
+        <a href="https://enepaq.com/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={Enapaq} alt="norelem" className={style.sponsorLogo} />
+        </a>
+        <a href="https://singularprint.pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={SingularPrint} alt="norelem" className={style.sponsorLogo} />
+        </a>
+    
         </div>
       </section>
 
@@ -136,12 +161,7 @@ function Sponsors() {
         <a href="https://www.ipc.pt/iid-e-empresas/instituto-de-investigac%CC%A7a%CC%83o-aplicada/" style={{ scale: "65%" }} target="_blank" rel="noopener noreferrer">
           <img src={i2alogo} alt="i2a" className={style.sponsorLogo} />
         </a>
-        <a href="https://norelem.es/pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
-          <img src={norelemlogo} alt="norelem" className={style.sponsorLogo} />
-        </a>
-
-
-         <a href="https://ipdj.gov.pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+        <a href="https://ipdj.gov.pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
           <img src={ipdj} alt="norelem" className={style.sponsorLogo} />
         </a>
          <a href="https://mixtronica.com/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">

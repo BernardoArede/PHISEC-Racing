@@ -192,7 +192,7 @@ const PH25 = () => {
       {
         name: "Operations",
         members: [
-          { name: "Edson Pereira",   photo: EdsonPereira,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/edsonrdp?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+          { name: "Edson Pereira",   photo: EdsonPereira,    role: "Department Leader",       linkedin: "https://www.linkedin.com/in/edsonrdp?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
           { name: "Diogo Farias",    photo: DiogoFarias,     role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
           { name: "Mafalda Pinto",   photo: MafaldaPinto,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/mafalda-p-358769176/" },
           { name: "Leonor Jacinto",  photo: LeonorJacinto,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
