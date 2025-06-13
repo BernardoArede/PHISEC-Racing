@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Team24.module.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
-import teamImage from '../assets/images/background_01.jpg';
 import { motion, AnimatePresence } from "framer-motion";
-import { FaLinkedinIn  } from "react-icons/fa";
-import image1 from "../assets/images/team_photo23.jpg";
+import image1 from "../assets/images/team_photo23.webp";
 
 
 const ph23 = () => {
@@ -18,7 +16,7 @@ const ph23 = () => {
     }, []);
   
     const teamData = {
-      teamPhoto: teamImage,
+      teamPhoto: image1,
       competition: {
         name: "    Formula Student Portugal",
         flag: (
@@ -47,72 +45,6 @@ const ph23 = () => {
         acceleration: "4.3s (0-75m)",
       },
       photos: [image1],
-      departments: [
-        { 
-          name: "Management",
-          members: [
-            { name: "Vitor Simões", photo: vitorsimoes, role: "Team Leader", linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
-            { name: "João Coelho", photo: joaocoelho, role: "Technical Diretor", linkedin: "https://linkedin.com" },
-          ],
-        },
-        {
-          name: "Suspension",
-          members: [
-            { name: "Dinis Coelho", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb/?trk=opento_nprofile_details" },
-            { name: "Rafael Quintino", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Carlos Paixão", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Rodrigo Carvalho", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          ],
-        },
-        {
-          name: "Drivetrain & Cooling",
-          members: [
-            { name: "Matheus Pereira", photo: matheuspereira, role: "Department Leader", linkedin: "https://linkedin.com" },
-            { name: "David Magalhães", photo:matheuspereira1 ,role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "José Dias", photo: "url_ana_costa", role: "Team Member", linkedin: "https://linkedin.com" },
-          ],
-        },
-        {
-          name: "Eletronics & Powertrain",
-          members: [
-            { name: "André Alves", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://linkedin.com" },
-            { name: "Miguel Monteiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Tiago Gaspar", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Francisco Soeiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Jordão Pereira", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          ],
-        },
-        {
-          name: "Vehicle Dynamics",
-          members: [
-            { name: "Luís Carreira", photo: luiscarreira, role: "Department Leader", linkedin: "https://linkedin.com" },
-            { name: "Tiago Cunha", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Catarina Silva", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Mariana Sousa", photo: "", role: "", linkedin: "" },
-          ],
-        },
-        {
-          name: "Chassi & Aero",
-          members: [
-            { name: "João Morgado", photo: "url_joao_silva", role: "Department Leader", linkedin: "https://linkedin.com" },
-            { name: "Diogo Almeida", photo: "url_maria_oliveira", role: "Department Leader", linkedin: "https://linkedin.com" },
-            { name: "Martim Ribeiro", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Eduardo Carvalho", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Rafael Reis", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Nicholas Sanders", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          ],
-        },
-        {
-          name: "Operations",
-          members: [
-            { name: "Diogo Farias", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Bernardo Arede", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Mafalda Pinto", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Leonor Jacinto", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-            { name: "Rodrigo Ferreira", photo: "url_maria_oliveira", role: "Team Member", linkedin: "https://linkedin.com" },
-          ],
-        },
-      ],
     };
     
     return (
@@ -189,40 +121,6 @@ const ph23 = () => {
               </ul>
           </div>
         </div>
-  
-        {/* Departamentos */}
-        <div className={styles.departmentsContainer}>
-    {teamData.departments.map((dept, index) => (
-      <div key={index} className={styles.department}>
-        <h3>{dept.name}</h3>
-        <div className={styles.members}>
-          {dept.members.map((member, idx) => (
-            <div
-              key={idx}
-              className={`${styles.memberCard} ${
-                member.role.includes("Leader") ? styles.teamLeader : ""
-              }`}
-            >
-              <div className={styles.memberImage}>
-                <img src={member.photo} alt={member.name} />
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.linkedinIcon}
-                >
-                  <FaLinkedinIn />
-                </a>
-              </div>
-              <p>{member.name}</p>
-              {member.role && <span className={styles.role}>{member.role}</span>}
-            </div>
-          ))}
-        </div>
-      </div>
-    ))}
-  </div>
-  
         <Footer />
       </div>
     );

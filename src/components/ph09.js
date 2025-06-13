@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Team24.module.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
-import teamImage from '../assets/images/background_01.jpg';
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLinkedinIn  } from "react-icons/fa";
-import image1 from "../assets/images/2006.JPG";
+import image1 from "../assets/images/2008.webp";
 
 
 
@@ -20,7 +19,7 @@ const ph06 = () => {
     }, []);
   
     const teamData = {
-      teamPhoto: teamImage,
+      teamPhoto: image1,
       competition: {
         name: "    Formula Student Portugal",
         flag: (

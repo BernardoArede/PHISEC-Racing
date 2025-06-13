@@ -11,7 +11,7 @@
 
 /* Countdown Section */
 .countdownSection {
-  margin: 5rem 0; /* Vertical spacing */
+  margin: 20px 0; /* Vertical spacing */
   text-align: center;
   padding: 0 1rem; /* Add some horizontal padding */
 }
@@ -28,13 +28,29 @@
   font-size: 1.8rem;
   margin-bottom: 3rem; /* More space before the countdown boxes */
   color: #565656;
-  font-weight: 500;
+  font-weight: 400;
 }
 
+.doubleCountDown {
+  display: flex;               /* flex container */
+  justify-content: space-around; /* espaço igual em volta */
+  align-items: flex-start;     /* alinha ao topo */
+  gap: 2rem;                   /* distância entre os dois */
+  flex-wrap: wrap;             /* em mobile caem em duas linhas */
+  margin: 0 auto;              /* centra o bloco, se quiser */
+}
+
+.countdownSection {
+  flex: 1 1 300px;             /* cresce até 400px, encolhe se necessário */
+  max-width: 45%;              /* até cerca de metade do container */
+  min-width: 300px;            /* evita ficar demasiado estreito */
+}
+
+/* o resto igual */
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 2.5rem; /* Increased gap between items */
+  gap: 2.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
 }

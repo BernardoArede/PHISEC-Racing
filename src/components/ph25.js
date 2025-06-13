@@ -3,19 +3,20 @@ import styles from "../styles/Team25.module.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useCountdown } from "./useCountDown.js";
 
 //phisec_admin
 //PHISEC_Racing2024
 
 import DianaSousa from '../assets/team_members/aero/Diana Sousa.jpg'
 import EduardoCarvalho from '../assets/team_members/aero/Eduardo Carvalho.jpg'
-import JoaoMorgado from '../assets/team_members/aero/João Morgado.jpg'
+import JoaoMorgado from '../assets/team_members/aero/Joao Morgado.jpg'
 import MartimRibeiro from '../assets/team_members/aero/Martim Ribeiro.jpg'
 
 import DiogoAlmeida from '../assets/team_members/chassi/Diogo Almeida.jpg'
-import AntonioAlmeida from '../assets/team_members/chassi/António Almeida.jpg'
+import AntonioAlmeida from '../assets/team_members/chassi/Antonio Almeida.jpg'
 import DiogoLaranjeiras from '../assets/team_members/chassi/Diogo Laranjeiras.jpg'
-import TomasCorreia from '../assets/team_members/chassi/Tomás.jpg'
+import TomasCorreia from '../assets/team_members/chassi/Tomas.jpg'
 import Nicholas from '../assets/team_members/chassi/Nicolas.jpg'
 import FranciscoMatos from '../assets/team_members/chassi/Francisco Matos.jpg'
 
@@ -24,8 +25,8 @@ import DiogoAlbuquerque from '../assets/team_members/autonomous/DiogoAlbuquerque
 import BernardoArede from '../assets/team_members/autonomous/BernardoArede.jpg'
 
 //Falta um Tiago Qualquer
-import DavidMagalhaes from '../assets/team_members/Drivetrain & Cooling/David Magalhães.JPG'
-import JoseAndrade from '../assets/team_members/Drivetrain & Cooling/José Miguel Andrade.JPG'
+import DavidMagalhaes from '../assets/team_members/Drivetrain & Cooling/David Magalhaes.JPG'
+import JoseAndrade from '../assets/team_members/Drivetrain & Cooling/Jose Miguel Andrade.JPG'
 import MatheusPereira from '../assets/team_members/Drivetrain & Cooling/Matheus Alexandre Pereira.JPG'
 import RodrigoFerreira from '../assets/team_members/Drivetrain & Cooling/Rodrigo Ferreira.JPG'
 
@@ -36,7 +37,7 @@ import Soeiro from '../assets/team_members/eletronics/Soeiro.JPG'
 import Alexandre from '../assets/team_members/eletronics/AlexandreFerreira.JPG'
 import AndreAlves from '../assets/team_members/eletronics/AndreAlves.JPG'
 
-import VitorSimoes from '../assets/team_members/management/Vitor Simões.JPG'
+import VitorSimoes from '../assets/team_members/management/Vitor Simoes.JPG'
 import JoaoCoelho from '../assets/team_members/management/JoaoCoelho.JPG'
 
 //Suspension
@@ -46,6 +47,7 @@ import CarlosPaixao from '../assets/team_members/suspension/CarlosPaixao.JPG'
 import LuisBugalho from '../assets/team_members/suspension/LuisBugalho.JPG'
 import RafaelQuintino from '../assets/team_members/suspension/RafaelQuintino.JPG'
 import FilipePontes from '../assets/team_members/suspension/FilipePontes.JPG'
+import RodrigoCarvalho from '../assets/team_members/suspension/RodrigoCarvalho.JPG'
 
 //VD
 
@@ -64,156 +66,153 @@ import RodrigoFerreiraVD  from '../assets/team_members/operations/JoeMale.JPG'
 import LeonorJacinto  from '../assets/team_members/operations/Leonor Jacinto.JPG'
 import GabrielaSilva from '../assets/team_members/operations/Beatriz.JPG'
 import EdsonPereira  from '../assets/team_members/operations/Edson Pereira.JPG'
-
-
-
+import { RiForward10Fill } from "react-icons/ri";
 
 
 const PH25 = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+   const timeFSPT = useCountdown("2025-07-27T00:00:00");
+  const timeFSS  = useCountdown("2025-08-04T00:00:00");
   // Countdown logic
-  useEffect(() => {
-  
-    const targetDate = new Date("2025-06-11T00:00:00").getTime(); // June 11, 2025
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        setTimeLeft({ days, hours, minutes, seconds });
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
-    };
-
-    const timerInterval = setInterval(updateTimer, 1000);
-    return () => clearInterval(timerInterval);
-  }, []);
 
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  //TODO-> Database for include members
+  // const [teamData, setTeamData] = useState({ departments: [] });
+  // useEffect(() => {
+  //   fetch("/api/team.ph")              
+  //     .then(res => {
+  //       if (!res.ok) throw new Error("Network response was not ok");
+  //       return res.json();
+  //     })
+  //     .then(json => {
+  //       setTeamData(json);
+  //     })
+  //     .catch(err => {
+  //       console.error("Erro ao carregar dados da equipa:", err);
+  //     });
+  // }, []);
+
+   const renderTimer = (label, date, timeLeft) => (
+    <section className={styles.countdownSection} key={label}>
+      <h1 className={styles.title}>{label}</h1>
+      <h3 className={styles.date}>{date}</h3>
+      <div className={styles.countdown}>
+        {["days", "hours", "minutes", "seconds"].map(unit => (
+          <div key={unit} className={styles.countdownItem}>
+            <span className={styles.number}>{timeLeft[unit]}</span>
+            <p className={styles.label}>
+              {unit.charAt(0).toUpperCase() + unit.slice(1)}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+
+
+  // //TODO-> Database for include members
   const teamData = {
     departments: [
       {
         name: "Management",
         members: [
-          { name: "Vitor Simões", photo: VitorSimoes, role: "Team Leader", linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
-          { name: "João Coelho", photo: JoaoCoelho, role: "Technical Director", linkedin: "https://linkedin.com" },
+          { name: "Vitor Simões", photo: VitorSimoes, role: "Team Leader",      linkedin: "https://www.linkedin.com/in/sim%C3%B5esvitor/" },
+          { name: "João Coelho",  photo: JoaoCoelho,  role: "Technical Director", linkedin: "https://www.linkedin.com/in/joao-francisco-coelho/" },
         ],
       },
       {
         name: "Eletronics & Powertrain",
         members: [
-          { name: "André Alves", photo: AndreAlves, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Miguel Monteiro", photo: Onorio, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Tiago Gaspar", photo: TiagoGaspar, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Francisco Soeiro", photo: Soeiro, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Jordão Pereira", photo: Jordao, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Alexandre Ferreira", photo: Alexandre, role: "Team Member", linkedin: "https://linkedin.com" },
-            
+          { name: "André Alves",       photo: AndreAlves,  role: "Department Leader", linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Miguel Monteiro",   photo: Onorio,       role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Tiago Gaspar",      photo: TiagoGaspar,  role: "Team Member",       linkedin: "https://www.linkedin.com/in/tiagorgaspar/" },
+          { name: "Francisco Soeiro",  photo: Soeiro,       role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Jordão Pereira",    photo: Jordao,       role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Alexandre Ferreira",photo: Alexandre,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/alexandre-ferreira-7a4493358/?originalSubdomain=pt" },
         ],
       },
       {
         name: "Drivetrain & Cooling",
         members: [
-          { name: "Matheus Pereira", photo: MatheusPereira, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "David Magalhães", photo: DavidMagalhaes, role: "Team Member", linkedin: "https://www.linkedin.com/in/david-magalh%C3%A3es-189993334/" },
-          { name: "José Dias", photo: JoseAndrade, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Rodrigo Pereira", photo: RodrigoFerreira, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Matheus Pereira", photo: MatheusPereira,  role: "Department Leader", linkedin: "https://www.linkedin.com/in/matheus-alexandre-pereira-246a13272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+          { name: "David Magalhães", photo: DavidMagalhaes,   role: "Team Member",       linkedin: "https://www.linkedin.com/in/david-magalh%C3%A3es-189993334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+          { name: "José Dias",       photo: JoseAndrade,      role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Rodrigo Pereira", photo: RodrigoFerreira,  role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
         ],
       },
       {
         name: "Suspension",
         members: [
-          { name: "Dinis Coelho", photo: DinisCoelho, role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb" },
-          { name: "Rafael Quintino", photo: RafaelQuintino, role: "Team Member", linkedin: "https://www.linkedin.com/in/rafaelquintino/" },
-          { name: "Carlos Paixão", photo: CarlosPaixao, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Bernardo Santos", photo: BernardoSantos, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Luís Bugalho", photo: LuisBugalho, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Filipe Pontes", photo: FilipePontes, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Dinis Coelho",    photo: DinisCoelho,     role: "Department Leader", linkedin: "https://www.linkedin.com/in/dinis-coelho-555b481bb" },
+          { name: "Rafael Quintino", photo: RafaelQuintino,  role: "Team Member",       linkedin: "https://www.linkedin.com/in/rafaelquintino/" },
+          { name: "Carlos Paixão",   photo: CarlosPaixao,    role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Bernardo Santos", photo: BernardoSantos,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Luís Bugalho",    photo: LuisBugalho,     role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Filipe Ponte",   photo: FilipePontes,    role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Rodrigo Carvalho",   photo: RodrigoCarvalho,    role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
         ],
       },
       {
         name: "Vehicle Dynamics",
         members: [
-          { name: "Luís Carreira", photo: LuisCarreira , role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Tiago Cunha", photo: Tiago, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Catarina Silva", photo: CatarinaSilva, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Mariana Sousa", photo: MarianaSousa, role: "Team Member", linkedin: "" },
-          { name: "Inês Coutinho", photo: InesCoutinho, role: "Team Member", linkedin: "" },
+          { name: "Luís Carreira",   photo: LuisCarreira,    role: "Department Leader", linkedin: "https://www.linkedin.com/in/luis-carreira/" },
+          { name: "Tiago Cunha",     photo: Tiago,           role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Catarina Silva",  photo: CatarinaSilva,   role: "Team Member",       linkedin: "https://www.linkedin.com/in/catarina-silva-270a51314/" },
+          { name: "Mariana Sousa",   photo: MarianaSousa,    role: "Team Member",       linkedin: "" },
+          { name: "Inês Coutinho",   photo: InesCoutinho,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/in%C3%AAs-coutinho-275266246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
         ],
       },
       {
         name: "Chassi & Aero",
         members: [
-          { name: "João Morgado", photo: JoaoMorgado, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Diogo Almeida", photo: DiogoAlmeida, role: "Department Leader", linkedin: "https://www.linkedin.com/in/diogo-de-almeida-543882257/" },
-          { name: "Martim Ribeiro", photo: MartimRibeiro, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Eduardo Carvalho", photo: EduardoCarvalho, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Nicholas Sanders", photo: Nicholas, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Diana Sousa", photo: DianaSousa, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "António Almeida", photo: AntonioAlmeida, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Diogo Laranjeiras", photo: DiogoLaranjeiras, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Francisco Matos", photo: FranciscoMatos, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Tomás Correia", photo: TomasCorreia, role: "Team Member", linkedin: "https://www.linkedin.com/in/tomascorreia005" },
+          { name: "João Morgado",    photo: JoaoMorgado,     role: "Department Leader", linkedin: "http://www.linkedin.com/in/joaomorgado03" },
+          { name: "Diogo Almeida",   photo: DiogoAlmeida,    role: "Department Leader", linkedin: "https://www.linkedin.com/in/diogo-de-almeida-543882257/" },
+          { name: "Martim Ribeiro",  photo: MartimRibeiro,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Eduardo Carvalho",photo: EduardoCarvalho, role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Nicholas Sanders",photo: Nicholas,        role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Diana Sousa",     photo: DianaSousa,      role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "António Almeida", photo: AntonioAlmeida,  role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Diogo Laranjeiras",photo: DiogoLaranjeiras,role: "Team Member",      linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Francisco Matos", photo: FranciscoMatos,  role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Tomás Correia",   photo: TomasCorreia,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/tomascorreia005?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         ],
       },
       {
         name: "Operations",
         members: [
-          { name: "Edson Pereira", photo: EdsonPereira, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Diogo Farias", photo: DiogoFarias, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Mafalda Pinto", photo: MafaldaPinto, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Leonor Jacinto", photo: LeonorJacinto, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Rodrigo Ferreira", photo: RodrigoFerreiraVD, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Gabriela Silva", photo: GabrielaSilva, role: "Team Member", linkedin: "https://linkedin.com" },
+          { name: "Edson Pereira",   photo: EdsonPereira,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/edsonrdp?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+          { name: "Diogo Farias",    photo: DiogoFarias,     role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Mafalda Pinto",   photo: MafaldaPinto,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/mafalda-p-358769176/" },
+          { name: "Leonor Jacinto",  photo: LeonorJacinto,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Rodrigo Ferreira",photo: RodrigoFerreiraVD,role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Gabriela Silva",  photo: GabrielaSilva,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
         ],
-      
       },
       {
         name: "Autonomous Systems",
         members: [
-          { name: "Bernardo Arede", photo: BernardoArede, role: "Department Leader", linkedin: "https://linkedin.com" },
-          { name: "Diogo Marques", photo: DiogoMarques, role: "Team Member", linkedin: "https://linkedin.com" },
-          { name: "Diogo Albuquerque", photo: DiogoAlbuquerque, role: "Team Member", linkedin: "https://linkedin.com" },
-        
+          { name: "Bernardo Arede",  photo: BernardoArede,   role: "Department Leader", linkedin: "https://www.linkedin.com/in/bernardo-arede-270083287/" },
+          { name: "Diogo Marques",    photo: DiogoMarques,    role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Diogo Albuquerque",photo: DiogoAlbuquerque,role: "Team Member",       linkedin: "https://www.linkedin.com/in/diogo-albuquerque-384a50349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
         ],
-      
       },
-    ],
+    ],  
+
   };
 
   return (
     <div className={styles.teamPage}>
       <Header />
 
-      {/* Countdown Section at the top */}
-      <section className={styles.countdownSection}>
-        <h1 className={styles.title}>ROLLOUT</h1>
-        {/* IMPORTANT: Update the date below to your actual PH25 rollout date */}
-        <h3 className={styles.date}>June 11, 2025</h3> {/* Example date */}
-        <div className={styles.countdown}>
-          {["days", "hours", "minutes", "seconds"].map((unit) => (
-            <div key={unit} className={styles.countdownItem}>
-              <span className={styles.number}>{timeLeft[unit]}</span>
-              <p className={styles.label}>{unit.charAt(0).toUpperCase() + unit.slice(1)}</p>
-            </div>
-          ))}
-        </div>
+     <section className={styles.doubleCountDown}>
+        {renderTimer("FSPT", "July 27, 2025", timeFSPT)}
+        {renderTimer("FSS",  "August 04, 2025", timeFSS)}
       </section>
 
-      {/* Removed the photoSection and mainContent (car specs + results) */}
-      {/* The departments section will now directly follow the countdown */}
+
 
       {/* Departamentos */}
       <div className={styles.departmentsContainer}>

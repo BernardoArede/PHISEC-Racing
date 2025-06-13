@@ -1,10 +1,12 @@
 import {useEffect, useState} from 'react';
 import { HiChevronDoubleRight } from "react-icons/hi";
+import { NavLink } from 'react-router-dom';
 import styles from '../styles/global.module.css';
 import style from '../styles/HomeScreen.module.css';  
 import Header from './Header';
-import imagebg from '../assets/images/Home_Image.png';
+import imagebg from '../assets/images/Home_Image.webp';
 import Footer from './Footer.js';
+
 
 
 // Importando logotipos dos patrocinadores para a seção de platinum patrocinadores
@@ -13,7 +15,7 @@ import extramotionlogo from '../assets/images/sponsors/Logo_Extramotion.png';
 import grumanlogo from '../assets/images/sponsors/Gruman.png';
 import scaleOceanLogo from '../assets/images/sponsors/scaleocean.png';
 import iseclogo from '../assets/images/sponsors/isec.png';
-import { NavLink } from 'react-router-dom';
+
 
 function Home() {
 
@@ -24,7 +26,7 @@ function Home() {
     <div className={styles.container}>
       {/* Seção Hero com a imagem por cima do header */}
       <section className={styles.hero}>
-        <img src={imagebg} alt="header-image" className={styles.heroImage} style={{boxShadow:"10px #00000055"}} />
+        <img src={imagebg} alt="header-image"  loading="lazy" className={styles.heroImage} style={{boxShadow:"10px #00000055"}} />
         <div className={styles.heroOverlay}></div>
       </section>
 

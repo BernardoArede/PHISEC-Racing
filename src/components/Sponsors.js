@@ -16,13 +16,21 @@ import efapellogo from '../assets/images/sponsors/efapel.png'
 import sofalcalogo from '../assets/images/sponsors/sofalca.png'
 import cepralogo from '../assets/images/sponsors/cepra.png'
 import coficablogo from '../assets/images/sponsors/coficab.png'
-import vimarsillogo from '../assets/images/sponsors/vimarsil.png'
 import kisssoftlogo from '../assets/images/sponsors/kisssoft.png'
 import aeiseclogo from '../assets/images/sponsors/aeisec.png'
 import i2alogo from '../assets/images/sponsors/i2a.png'
-import kvaserlogo from '../assets/images/sponsors/kvaser.png'
-import sensatalogo from   '../assets/images/sponsors/sensata.png'
 import norelemlogo from '../assets/images/sponsors/norelem.png'
+
+
+import ipdj from '../assets/images/sponsors/IPDJ.png'
+import mixtronica from '../assets/images/sponsors/mixtronica.png'
+import tubohidraulica from '../assets/images/sponsors/Tubo Hidraulica.png'
+import smart3D from '../assets/images/sponsors/Smart3d.png'
+import climaTTempo from '../assets/images/sponsors/Clima t tempo.png'
+import RRMP from '../assets/images/sponsors/RRMP.png'
+
+
+
 
 function Sponsors() {
   useEffect(() => {
@@ -36,8 +44,6 @@ function Sponsors() {
       <div className={style.imgContainer}>
         <h1 className={style.titleImage}>
           Without You It Would't Be Possible!</h1> 
-          
-      
       </div>
 
       {/* Seção de Platinum Sponsors */}
@@ -66,9 +72,6 @@ function Sponsors() {
           </a>
           <a href="https://scalesoceans.pt/" style={{ scale: "90%" }} target="_blank" rel="noopener noreferrer">
             <img src={scaleOceanLogo} alt="extramotion" className={style.sponsorLogo} />
-          </a>
-          <a href="https://www.isec.pt/PT/Default.aspx" style={{ scale: "70%", marginTop:"30px"}} target="_blank" rel="noopener noreferrer">
-            <img src={iseclogo} alt="extramotion" className={style.sponsorLogo} />
           </a>
         </div>
       </section>
@@ -114,8 +117,8 @@ function Sponsors() {
           <a href="https://www.kisssoft.com/pt" style={{ scale: "70%" }} target="_blank" rel="noopener noreferrer">
             <img src={kisssoftlogo} alt="kisssoft" className={style.sponsorLogo} />
           </a>
-          <a href="https://www.vimarsilgrafica.com/" style={{ scale: "60%" }} target="_blank" rel="noopener noreferrer">
-            <img src={vimarsillogo} alt="vimarsil" className={style.sponsorLogo} />
+          <a href="https://www.isec.pt/PT/Default.aspx" style={{ scale: "70%", marginTop:"30px"}} target="_blank" rel="noopener noreferrer">
+            <img src={iseclogo} alt="extramotion" className={style.sponsorLogo} />
           </a>
         </div>
       </section>
@@ -133,14 +136,28 @@ function Sponsors() {
         <a href="https://www.ipc.pt/iid-e-empresas/instituto-de-investigac%CC%A7a%CC%83o-aplicada/" style={{ scale: "65%" }} target="_blank" rel="noopener noreferrer">
           <img src={i2alogo} alt="i2a" className={style.sponsorLogo} />
         </a>
-        <a href="https://kvaser.com/" style={{ scale: "70%" }} target="_blank" rel="noopener noreferrer">
-          <img src={kvaserlogo} alt="kvaser" className={style.sponsorLogo} />
-        </a>
-        <a href="https://www.sensata.com/" style={{ scale: "100%" }} target="_blank" rel="noopener noreferrer">
-          <img src={sensatalogo} alt="sensata" className={style.sponsorLogo} />
-        </a>
         <a href="https://norelem.es/pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
           <img src={norelemlogo} alt="norelem" className={style.sponsorLogo} />
+        </a>
+
+
+         <a href="https://ipdj.gov.pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={ipdj} alt="norelem" className={style.sponsorLogo} />
+        </a>
+         <a href="https://mixtronica.com/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={mixtronica} alt="norelem" className={style.sponsorLogo} />
+        </a>
+         <a href="https://tubohidraulica.com/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={tubohidraulica} alt="norelem" className={style.sponsorLogo} />
+        </a>
+         <a href="https://www.smart3d.pt/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={smart3D} alt="norelem" className={style.sponsorLogo} />
+        </a>
+         <a href="https://climatizacaottempo.com/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={climaTTempo} alt="norelem" className={style.sponsorLogo} />
+        </a>
+         <a href="https://rrmp.eu/" style={{ scale: "70%",marginBottom: "60px"  }} target="_blank" rel="noopener noreferrer">
+          <img src={RRMP} alt="norelem" className={style.sponsorLogo} />
         </a>
       </div>
     </section>

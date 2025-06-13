@@ -2,12 +2,33 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Contact.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
-import DianaSousa from '../assets/team_members/aero/Diana Sousa.jpg'
+import VitorSimoes from '../assets/team_members/management/Vitor Simoes.JPG'
+import JoaoCoelho from '../assets/team_members/management/JoaoCoelho.JPG'
+
 
 const Contact = () => {
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+   const [teamData, setTeamData] = useState({ departments: [] });
+  useEffect(() => {
+    fetch("/api/team")              
+      .then(res => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+      })
+      .then(json => {
+        setTeamData(json);
+      })
+      .catch(err => {
+        console.error("Erro ao carregar dados da equipa:", err);
+      });
+  }, []);
+
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -93,19 +114,19 @@ ${formData.name} (${formData.email})`;
 
       <div className={styles.contactContainer}>
         <div className={styles.contactCard}>
-          <img src={DianaSousa} alt="Vitor Simões" className={styles.contactImage} />
+          <img src={VitorSimoes} alt="Vitor Simões" className={styles.contactImage} />
           <div className={styles.contactInfo}>
             <h2>Vitor Simões</h2>
             <p className={styles.role}>Team Leader</p>
-            <p className={styles.email}>Email: <a href={`mailto:`}></a></p>
+            {/* <p className={styles.email}>Email: <a href={`mailto:`}></a></p> */}
           </div>
         </div>
         <div className={styles.contactCard}>
-          <img src={DianaSousa} alt="João Coelho" className={styles.contactImage} />
+          <img src={JoaoCoelho} alt="João Coelho" className={styles.contactImage} />
           <div className={styles.contactInfo}>
             <h2>João Coelho</h2>
             <p className={styles.role}>Technical Director</p>
-            <p className={styles.email}>Email: <a href={`mailto:`}></a></p>
+            {/* <p className={styles.email}>Email: <a href={`mailto:`}></a></p> */}
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/images/PHISECbranco.png';
 import styles from '../styles/global.module.css';
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { SlArrowDown } from "react-icons/sl";
@@ -54,7 +53,7 @@ function Header({ isHome = false }) {
     <header className={`${styles.header} ${isFixed ? styles.fixed : ''}`}>
       <div className="flex items-center space-x-4">
         <NavLink to="/">
-          <img src={logo} alt="Logo" className={styles.logo} />
+          <img src="/PHISECbranco.png" alt="Logo" className={styles.logo} />
         </NavLink>
       </div>
       {isHome && (

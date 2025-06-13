@@ -16,6 +16,7 @@ import suspension from '../assets/icons_departments/suspension_dep.png';
 import vehicle from '../assets/icons_departments/vehicle_dynamics_dep.png';
 import management from '../assets/icons_departments/management_dep.png'
 import autonomous from '../assets/icons_departments/autonomous_dep.png'
+import drivetrain from '../assets/icons_departments/Drivetrain_dep.png'
 
 function About() {
   useEffect(() => {
@@ -30,11 +31,11 @@ function About() {
     { id: 3, icon: chassis, name: 'Chassis', description: 'The Chassis department is responsible for the vehicle structure and impact atenuator.' },
     { id: 4, icon: operation, name: 'Operations', description: 'The Operations department manages non engeneering task like Business and Marketing.' },
     { id: 5, icon: powertrain, name: 'Powertrain', description: 'The Powertrain department handles the high Voltage propulsion system.' },
-    { id: 6, icon: suspension, name: 'Suspension', description: 'The Suspension department develops damping, breaking and systems.' },
+    { id: 6, icon: suspension, name: 'Suspension', description: 'The Suspension department develops damping and breaking system.' },
     { id: 7, icon: vehicle, name: 'Vehicle Dynamics', description: 'The Vehicle Dynamics department simulates and optimizes overall vehicle performance.' },
     { id: 8, icon: management, name: 'Management', description: 'Composed of the Team Leader and Technical Director, the Managment department oversees the whole team.' },
     { id: 9, icon: autonomous, name: 'Autonomous Systems', description: ' The autonomous department is responsable for all systems need for the car to operate by it self' },
-    
+    { id: 10, icon: drivetrain, name: 'Drivetrain & Cooling', description: 'The Drivetrain & Cooling department designs and integrates power transmission components and thermal management systems to ensure efficient propulsion and optimal operating temperatures.' },
   ];
 
   return (

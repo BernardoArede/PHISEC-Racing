@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { HashRouter as Router, Route, Routes, HashRouter } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Sponsors from "./components/Sponsors";
@@ -18,7 +18,7 @@ import Ph09 from "./components/ph09";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -34,7 +34,8 @@ function App() {
         <Route path="/team/ph08" element={<Ph08 />} />
         <Route path="/team/ph07" element={<Ph07 />} />
       </Routes>
-    </Router>
+    </HashRouter>
+   
   );
 }
 

@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Team24.module.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
-import teamImage from "../assets/images/background_01.jpg";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaLinkedinIn } from "react-icons/fa";
-import image1 from "../assets/images/team_photo24.jpg";
+import image1 from "../assets/images/team_photo24.webp";
 
 const ph24 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +15,7 @@ const ph24 = () => {
   }, []);
 
   const teamData = {
-    teamPhoto: teamImage,
+    teamPhoto: image1,
     competition: {
       name: "    Formula Student Portugal",
       flag: (
