@@ -66,7 +66,8 @@ import RodrigoFerreiraVD  from '../assets/team_members/operations/JoeMale.JPG'
 import LeonorJacinto  from '../assets/team_members/operations/Leonor Jacinto.JPG'
 import GabrielaSilva from '../assets/team_members/operations/Beatriz.JPG'
 import EdsonPereira  from '../assets/team_members/operations/Edson Pereira.JPG'
-import { RiForward10Fill } from "react-icons/ri";
+import BeatrizSantos  from '../assets/team_members/operations/JoeFemale.JPG'
+
 
 
 const PH25 = () => {
@@ -180,6 +181,14 @@ const PH25 = () => {
           { name: "Tomás Correia",   photo: TomasCorreia,    role: "Team Member",       linkedin: "https://www.linkedin.com/in/tomascorreia005?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         ],
       },
+       {
+        name: "Autonomous Systems",
+        members: [
+          { name: "Bernardo Arede",  photo: BernardoArede,   role: "Department Leader", linkedin: "https://www.linkedin.com/in/bernardo-arede-270083287/" },
+          { name: "Diogo Marques",    photo: DiogoMarques,    role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
+          { name: "Diogo Albuquerque",photo: DiogoAlbuquerque,role: "Team Member",       linkedin: "https://www.linkedin.com/in/diogo-albuquerque-384a50349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+        ],
+      },
       {
         name: "Operations",
         members: [
@@ -189,14 +198,7 @@ const PH25 = () => {
           { name: "Leonor Jacinto",  photo: LeonorJacinto,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
           { name: "Rodrigo Ferreira",photo: RodrigoFerreiraVD,role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
           { name: "Gabriela Silva",  photo: GabrielaSilva,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
-        ],
-      },
-      {
-        name: "Autonomous Systems",
-        members: [
-          { name: "Bernardo Arede",  photo: BernardoArede,   role: "Department Leader", linkedin: "https://www.linkedin.com/in/bernardo-arede-270083287/" },
-          { name: "Diogo Marques",    photo: DiogoMarques,    role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
-          { name: "Diogo Albuquerque",photo: DiogoAlbuquerque,role: "Team Member",       linkedin: "https://www.linkedin.com/in/diogo-albuquerque-384a50349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+          { name: "Beatriz Santos",  photo: BeatrizSantos,   role: "Team Member",       linkedin: "https://www.linkedin.com/company/phisecracing/posts/?feedView=all" },
         ],
       },
     ],  

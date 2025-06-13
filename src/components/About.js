@@ -34,7 +34,7 @@ function About() {
     { id: 6, icon: suspension, name: 'Suspension', description: 'The Suspension department develops damping and breaking system.' },
     { id: 7, icon: vehicle, name: 'Vehicle Dynamics', description: 'The Vehicle Dynamics department simulates and optimizes overall vehicle performance.' },
     { id: 8, icon: management, name: 'Management', description: 'Composed of the Team Leader and Technical Director, the Managment department oversees the whole team.' },
-    { id: 9, icon: autonomous, name: 'Autonomous Systems', description: ' The autonomous department is responsable for all systems need for the car to operate by it self' },
+    { id: 9, icon: autonomous, name: 'Autonomous Systems', description: ' The autonomous department is responsable for all systems need for the car to operate by it self.' },
     { id: 10, icon: drivetrain, name: 'Drivetrain & Cooling', description: 'The Drivetrain & Cooling department designs and integrates power transmission components and thermal management systems to ensure efficient propulsion and optimal operating temperatures.' },
   ];
 
