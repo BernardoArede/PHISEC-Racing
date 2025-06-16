@@ -50,7 +50,7 @@ const FormulaStudent = () => {
     { name: 'Acceleration', points: 75 },
     { name: 'Skidpad', points: 50 },
     { name: 'Autocross', points: 150 },
-    { name: 'Fuel Economy', points: 50 },
+    { name: 'Efficiency', points: 50 },
     { name: 'Endurance', points: 350 },
   ];
 

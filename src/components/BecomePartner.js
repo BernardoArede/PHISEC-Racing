@@ -35,8 +35,7 @@ const JoinTheTeam = () => {
     // Limpar formulário
     setFormData({
       name: "",
-      studentNumber: "",
-      course: "",
+      companyName : "",
       message: "",
     });
   };
@@ -48,7 +47,7 @@ const JoinTheTeam = () => {
       <div className={styles.formContainer}>
         <h2 className={styles.formTitle}>Support Us!</h2>
         <p className={styles.formDescription}>
-        If you are a sponsor interested in supporting our journey and investing in the future of engineering, we would love to hear from you.
+        If you represent a company interested to supporting our journey and investing in the future of engineering, we would love to hear from you.
         </p>
         <form onSubmit={handleSubmit} className={styles.applicationForm}>
           {/* Nome Completo */}
@@ -77,7 +76,7 @@ const JoinTheTeam = () => {
                 type="text"
                 id="companyName"
                 name="companyName"
-                value={formData.studentNumber}
+                value={formData.companyName}
                 onChange={handleChange}
                 required
                 className={`${styles.formInput} ${styles.noSpin}`}  // Adicionando a classe personalizada

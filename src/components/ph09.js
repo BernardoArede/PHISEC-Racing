@@ -59,7 +59,6 @@ const ph06 = () => {
         {/* Foto geral da equipa */}
         <section className={styles.photoSection}>
           <AnimatePresence mode="wait">
-            {/* Imagem atual */}
             <motion.img
               key={currentIndex}
               src={teamData.photos[currentIndex]}
@@ -70,19 +69,7 @@ const ph06 = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 2 }}
             />
-  
-            {/* Próxima imagem */}
-            <motion.img
-              key={nextIndex}
-              src={teamData.photos[nextIndex]}
-              alt={`Team member ${nextIndex + 1}`}
-              style={{ width: "100%", height: "auto" }}
-              initial={{ opacity: 1 }}
-              animate={{ opacity: isLoaded ? 1 : 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 2 }}
-              onLoad={() => setIsLoaded(true)}
-            />
+
           </AnimatePresence>
         </section>
   

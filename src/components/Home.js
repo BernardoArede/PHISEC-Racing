@@ -14,7 +14,7 @@ import ipclogo from '../assets/images/sponsors/ipc.png';
 import extramotionlogo from '../assets/images/sponsors/Logo_Extramotion.png';
 import grumanlogo from '../assets/images/sponsors/Gruman.png';
 import scaleOceanLogo from '../assets/images/sponsors/scaleocean.png';
-import iseclogo from '../assets/images/sponsors/isec.png';
+import cadFlow from '../assets/images/sponsors/CADFLOW - 20 cm.png';
 
 
 function Home() {
@@ -98,8 +98,8 @@ function Home() {
             <a href="https://scalesoceans.pt/" style={{scale:"90%"}} target="_blank" rel="noopener noreferrer">
                 <img src={scaleOceanLogo} alt="extramotion" className={style.sponsorLogo} />
             </a>
-            <a href="https://www.isec.pt/PT/Default.aspx" style={{scale:"70%"}} target="_blank" rel="noopener noreferrer">
-                <img src={iseclogo} alt="extramotion" className={style.sponsorLogo} />
+            <a href="https://www.cadflow.pt/" style={{scale:"80%"}} target="_blank" rel="noopener noreferrer">
+                <img src={cadFlow} alt="extramotion" className={style.sponsorLogo} />
             </a>
             </div>  
           </section>
